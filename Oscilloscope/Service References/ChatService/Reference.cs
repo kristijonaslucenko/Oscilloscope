@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Osciloskopas.ChatService {
+namespace Oscilloscope.ChatService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ChatService.ISendChatService", CallbackContract=typeof(Osciloskopas.ChatService.ISendChatServiceCallback))]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ChatService.ISendChatService", CallbackContract=typeof(Oscilloscope.ChatService.ISendChatServiceCallback))]
     public interface ISendChatService {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ISendChatService/SendMessage")]
@@ -45,12 +45,12 @@ namespace Osciloskopas.ChatService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ISendChatServiceChannel : Osciloskopas.ChatService.ISendChatService, System.ServiceModel.IClientChannel {
+    public interface ISendChatServiceChannel : Oscilloscope.ChatService.ISendChatService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class SendChatServiceClient : System.ServiceModel.DuplexClientBase<Osciloskopas.ChatService.ISendChatService>, Osciloskopas.ChatService.ISendChatService {
+    public partial class SendChatServiceClient : System.ServiceModel.DuplexClientBase<Oscilloscope.ChatService.ISendChatService>, Oscilloscope.ChatService.ISendChatService {
         
         public SendChatServiceClient(System.ServiceModel.InstanceContext callbackInstance) : 
                 base(callbackInstance) {

@@ -39,6 +39,8 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -51,51 +53,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="FFT_DFT.cs" />
-    <Compile Include="FFT_DFT.designer.cs">
-      <DependentUpon>FFT_DFT.cs</DependentUpon>
+    <Compile Include="Algorithms\Algorithm.cs" />
+    <Compile Include="Algorithms\IDFTAlgorithm.cs" />
+    <Compile Include="Controllers\AnalysisController.cs" />
+    <Compile Include="Algorithms\FFTAlgorithm.cs" />
+    <Compile Include="Algorithms\FFTAlgorithm.designer.cs">
+      <DependentUpon>FFTAlgorithm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AnalysisForm.cs">
+    <Compile Include="DataHandlers\RandomDataHandler.cs" />
+    <Compile Include="ServiceHandlers\ReceivedSample.cs" />
+    <Compile Include="Views\AnalysisForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AnalysisForm.Designer.cs">
+    <Compile Include="Views\AnalysisForm.Designer.cs">
       <DependentUpon>AnalysisForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="ServiceHandlers\ReceiveClient.cs" />
+    <Compile Include="DataHandlers\SerialDataHandler.cs" />
+    <Compile Include="Models\Sample.cs" />
+    <Compile Include="Views\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MainController.cs" />
-    <Compile Include="ReceiveClient.cs" />
-    <Compile Include="SerialHandler.cs" />
-    <Compile Include="FixedSizeQueue.cs" />
-    <Compile Include="FormMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="Views\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DataHandlers\BaseDataHandler.cs" />
     <Compile Include="Service References\ChatService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AnalysisForm.resx">
+    <Compile Include="Controllers\SharingController.cs" />
+    <EmbeddedResource Include="Views\AnalysisForm.resx">
       <DependentUpon>AnalysisForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
+    <EmbeddedResource Include="Views\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FFT_DFT.resx">
-      <DependentUpon>FFT_DFT.cs</DependentUpon>
+    <EmbeddedResource Include="Algorithms\FFTAlgorithm.resx">
+      <DependentUpon>FFTAlgorithm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

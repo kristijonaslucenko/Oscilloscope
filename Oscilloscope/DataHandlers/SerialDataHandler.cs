@@ -3,68 +3,50 @@ using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Osciloskopas
+namespace Oscilloscope.DataHandlers
 {
-    class SerialHandler
+    public class SerialDataHandler : BaseDataHandler
     {
-        public bool _continue = false;
-        static SerialPort _serialPort;
-        static DateTime Jan1st1970;
+        private SerialPort _serialPort;
 
-
-        static double lastValue;
-
-        public SerialHandler(String com)
+        public SerialDataHandler()
         {
-            StringComparer stringComparer = StringComparer.OrdinalIgnoreCase;
-
-            // Thread readThread = new Thread(Read);
-
-            Jan1st1970 = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
-
             // Create a new SerialPort object with default settings.
             _serialPort = new SerialPort();
 
             // Allow the user to set the appropriate properties.
-            _serialPort.PortName = com;
             _serialPort.BaudRate = 250000;
-
-            //_serialPort.ReadTimeout = 50;
-            //  _serialPort.WriteTimeout = 50;
         }
-        public void Open()
+
+        public override void Open(int port)
         {
             try
             {
+                _serialPort.PortName = port.ToString();
                 _serialPort.Open();
-                _continue = true;
+
+                base.Open(port);
             }
             catch (Exception ex)
             {
-                _continue = false;
                 MessageBox.Show("Error: " + ex.ToString(), "ERROR");
-
             }
-
-
         }
-        public void Close()
-        {
 
+        public override void Close()
+        {
             _serialPort.Close();
         }
 
-        public double ReadData()
+        protected override double ReadData()
         {
-            long start = Millis(Jan1st1970);
-
             int value = -1;
             int loval;
             int hival;
-
 
             hival = _serialPort.ReadByte();
 
@@ -79,17 +61,13 @@ namespace Osciloskopas
 
             }
 
-            lastValue = value * 0.0049;
+            double lastValue = value * 0.0049;
             if (value < 0)
             {
                 return lastValue;
             }
-            return value * 0.0049;
 
-        }
-        public static long Millis(DateTime d)
-        {
-            return (long)((DateTime.UtcNow - Jan1st1970).TotalMilliseconds);
+            return value * 0.0049;
         }
 
     }

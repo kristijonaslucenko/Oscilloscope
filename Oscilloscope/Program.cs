@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Oscilloscope.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Osciloskopas
+namespace Oscilloscope
 {
     static class Program
     {

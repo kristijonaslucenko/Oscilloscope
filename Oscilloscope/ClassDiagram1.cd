@@ -1,2 +1,204 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Oscilloscope.Algorithms.FFTAlgorithm" Collapsed="true">
+    <Position X="13.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAIAAAAAQAQAEMACCABQCAAgAAAAABgABAAAAg=</HashCode>
+      <FileName>Algorithms\FFTAlgorithm.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.344" />
+  </Class>
+  <Class Name="Oscilloscope.Algorithms.IDFTAlgorithm" Collapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAIAAAACAAAAAAAA=</HashCode>
+      <FileName>Algorithms\IDFTAlgorithm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.Controllers.AnalysisController">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <AssociationLine Name="currentSample" Type="Oscilloscope.Models.Sample" ManuallyRouted="true">
+      <Path>
+        <Point X="14.25" Y="2.75" />
+        <Point X="14.25" Y="1.066" />
+        <Point X="7.875" Y="1.066" />
+        <Point X="7.875" Y="6.531" />
+        <Point X="11" Y="6.531" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAQA=</HashCode>
+      <FileName>Controllers\AnalysisController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="currentSample" />
+      <Field Name="fftAlgoritm" />
+      <Field Name="idftAlgorithm" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oscilloscope.Controllers.MainController" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAACgAAACASAAAAAAABBAAAIAAAgAAAgAA=</HashCode>
+      <FileName>Controllers\MainController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CurrentSample" />
+      <Property Name="DataHandler" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oscilloscope.Controllers.SharingController" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAAAAAAgAAACgAAIAgAAAAAAAABQAAAAAACAA=</HashCode>
+      <FileName>Controllers\SharingController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="receiveClient" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oscilloscope.DataHandlers.SampleRateUpdatedEventArgs" Collapsed="true">
+    <Position X="9.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataHandlers\BaseDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.DataHandlers.BaseDataHandler" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAEAAAAAAAABIAACYAkAAAQgAAABBAAAABAAAACAAAA=</HashCode>
+      <FileName>DataHandlers\BaseDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.DataHandlers.RandomDataHandler" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>DataHandlers\RandomDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.DataHandlers.SerialDataHandler" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABIAAAAAAAIAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>DataHandlers\SerialDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.Models.Sample" Collapsed="true">
+    <Position X="9.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBAAAAAAAAAAABAAAAAAQAAAAAAAAAAACAAABAgAAA=</HashCode>
+      <FileName>Models\Sample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.Program" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.ChatService.SendChatServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAACgAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Service References\ChatService\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Oscilloscope.ServiceHandlers.ReceiveClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAABAAACAAAAAAACBAAAAAAABAAAIAIAAAAAAAAAQ=</HashCode>
+      <FileName>ServiceHandlers\ReceiveClient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Oscilloscope.ServiceHandlers.ReceivedSample" Collapsed="true">
+    <Position X="8" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAFAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ServiceHandlers\ReceivedSample.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Oscilloscope.Views.AnalysisForm" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAQAACAAQBAgAgCAAAACQAAQAAAAAAQAAKECAAA=</HashCode>
+      <FileName>Views\AnalysisForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="acontroller" />
+      <Field Name="currentSample" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Oscilloscope.Views.FormMain" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCBA0AKQnCAIEBECAACJwAQyAAAgAAgBQCMAEAAoCAA=</HashCode>
+      <FileName>Views\FormMain.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="controller" />
+      <Field Name="sharingController" />
+    </ShowAsAssociation>
+  </Class>
+  <Struct Name="Oscilloscope.Algorithms.TKomplex" Collapsed="true">
+    <Position X="6" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Algorithms\FFTAlgorithm.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Oscilloscope.Algorithms.IAlgorithm" Collapsed="true">
+    <Position X="13.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Algorithms\Algorithm.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Oscilloscope.ChatService.ISendChatService" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAACAAAAAAACgAAAAAAAAAAAAAIQAAAAAAAAA=</HashCode>
+      <FileName>Service References\ChatService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Oscilloscope.ChatService.ISendChatServiceCallback" Collapsed="true">
+    <Position X="7.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ChatService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Oscilloscope.ChatService.ISendChatServiceChannel" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ChatService\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Delegate Name="Oscilloscope.DataHandlers.SampleRateUpdatedEventHandler" Collapsed="true">
+    <Position X="9.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>DataHandlers\BaseDataHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Oscilloscope.ServiceHandlers.ReceviedMessage" Collapsed="true">
+    <Position X="7.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ServiceHandlers\ReceiveClient.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Oscilloscope.ServiceHandlers.GotNames" Collapsed="true">
+    <Position X="6" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ServiceHandlers\ReceiveClient.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

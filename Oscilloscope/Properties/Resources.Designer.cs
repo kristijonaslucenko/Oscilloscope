@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Osciloskopas.Properties {
+namespace Oscilloscope.Properties {
     using System;
     
     

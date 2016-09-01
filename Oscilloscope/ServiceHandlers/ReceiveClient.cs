@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.ServiceModel;
 
-namespace Osciloskopas
+namespace Oscilloscope.ServiceHandlers
 {
     public delegate void ReceviedMessage(string sender, string message);
     public delegate void GotNames(object sender, List<string> names);
@@ -17,9 +17,9 @@ namespace Osciloskopas
         InstanceContext inst = null;
         ChatService.SendChatServiceClient chatClient = null;
 
-        public void Start(ReceiveClient rc,string name)
+        public void Start(string name)
         {
-            inst = new InstanceContext(rc);
+            inst = new InstanceContext(this);
             chatClient = new ChatService.SendChatServiceClient(inst);
             chatClient.Start(name);
         }
